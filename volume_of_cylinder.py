@@ -28,13 +28,14 @@ def main():
         radius_as_float = float(radius_as_string)
         # call functions
         calculated_volume = volume_of_cylinder(height_as_float, radius_as_float)
+        calculated_volume = round(calculated_volume, 2)
         print(
-            "The volume of this cylinder with the radius of {0} mm and height of {1} mm is {2} mm².".format(
+            "The volume of this cylinder with the radius of {0} mm and height of {1} mm is {2} mm³.".format(
                 radius_as_float, height_as_float, calculated_volume
             )
         )
     except Exception:
-        print("That is not an integer.")
+        print("That is not an float.")
     finally:
         print("\nDone.")
 
